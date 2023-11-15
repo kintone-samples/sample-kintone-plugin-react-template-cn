@@ -4,7 +4,7 @@ declare namespace kintone.types {
     id: kintone.fieldTypes.SingleLineText;
     tittle: kintone.fieldTypes.SingleLineText;
   }
-  interface outterAppSavedFields extends outFields {
+  interface outerAppSavedFields extends outFields {
     $id: kintone.fieldTypes.Id;
     $revision: kintone.fieldTypes.Revision;
     更新人: kintone.fieldTypes.Modifier;

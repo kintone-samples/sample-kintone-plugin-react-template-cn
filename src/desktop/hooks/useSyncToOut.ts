@@ -6,9 +6,9 @@ type appAResult = {
   result: kintone.types.appASavedFields[];
 };
 
-type outterAppResult = {
+type outerAppResult = {
   status: boolean;
-  result: kintone.types.outterAppSavedFields[];
+  result: kintone.types.outerAppSavedFields[];
 };
 
 export default function useSyncToOut() {
@@ -21,7 +21,7 @@ export default function useSyncToOut() {
   //获取外部系统
   const getProxyRecords = async () => {
     const apiUrl = `${url}/k/v1/records.json?app=${syncId}`;
-    let resp: outterAppResult = { status: false, result: [] };
+    let resp: outerAppResult = { status: false, result: [] };
     try {
       const [result] = await kintone.plugin.app.proxy(
         PLUGIN_ID,
